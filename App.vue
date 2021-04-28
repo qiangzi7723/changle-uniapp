@@ -2,7 +2,7 @@
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
-			console.log('App Launch2')
+			console.log('App Launch3')
 		},
 		onShow: function() {
 			console.log('App Show')

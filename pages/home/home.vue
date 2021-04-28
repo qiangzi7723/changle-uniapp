@@ -76,6 +76,7 @@ export default {
 
 <style lang="scss">
 .home {
+	// 顶部轮播样式
 	.banner {
 		width: 750rpx;
 		height: 420rpx;
@@ -94,20 +95,22 @@ export default {
 		}
 	}
 
+	// 内容区域容器
 	.app-container {
 		background-color: #f0e9e9;
-		height: 100vh;
 		width: 100vw;
 		border-radius: 40rpx 40rpx 0 0;
 
 		position: absolute;
 		margin-top: -40rpx;
 		z-index: 2;
+		
 	}
 
 	.content {
 		width: 670rpx;
 		margin: 0 auto;
+		margin-bottom: 40rpx;
 	}
 
 	/* 入口样式 */

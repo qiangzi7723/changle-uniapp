@@ -45,7 +45,6 @@
 }
 .home .app-container {
   background-color: #f0e9e9;
-  height: 100vh;
   width: 100vw;
   border-radius: 40rpx 40rpx 0 0;
   position: absolute;
@@ -55,6 +54,7 @@
 .home .content {
   width: 670rpx;
   margin: 0 auto;
+  margin-bottom: 40rpx;
 }
 .home .entry {
   margin-top: 52rpx;

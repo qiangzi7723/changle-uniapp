@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/index/index"
   ],
   "subPackages": [],
   "window": {
@@ -10,6 +10,25 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "tabBar": {
+    "custom": false,
+    "color": "#ACACAC",
+    "selectedColor": "#C8161C",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "/static/asset/img/home/tab_icon_zy_selected@2x.png",
+        "selectedIconPath": "/static/asset/img/home/tab_icon_zy_selected@2x.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/static/asset/img/home/tab_icon_wd_normal@2x.png",
+        "selectedIconPath": "/static/asset/img/home/tab_icon_wd_normal@2x.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "usingComponents": {}
 }

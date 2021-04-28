@@ -1,25 +1,43 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "长乐时光",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "长乐时光"
 			}
 		}
-	    ,{
-            "path" : "pages/home/home",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"custom": false,
+		"color": "#ACACAC",
+		"selectedColor": "#C8161C",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"iconPath": "/static/asset/img/home/tab_icon_zy_selected@2x.png",
+				"selectedIconPath": "/static/asset/img/home/tab_icon_zy_selected@2x.png",
+				"text": "主页"
+			},
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "/static/asset/img/home/tab_icon_wd_normal@2x.png",
+				"selectedIconPath": "/static/asset/img/home/tab_icon_wd_normal@2x.png",
+				"text": "个人中心"
+			}
+		]
 	}
 }

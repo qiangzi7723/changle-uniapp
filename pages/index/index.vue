@@ -11,14 +11,26 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				 list: [{
+				            "text": "对话",
+				            "iconPath": "../../images/tabbar_icon_chat_default.png",
+				          "selectedIconPath": "../../images/tabbar_icon_chat_active.png",
+				            dot: true
+				        },
+				        {
+				            "text": "设置",
+				          "iconPath": "../../images/tabbar_icon_setting_default.png",
+				          "selectedIconPath": "../../images/tabbar_icon_setting_active.png",
+				            badge: 'New'
+				        }]
 			}
 		},
 		onLoad() {
 			console.log('index页面加载中')
-			uni.navigateTo({
-				url: "../home/home"
-			})
+			// uni.navigateTo({
+			// 	url: "../home/home"
+			// })
 		},
 		methods: {
 
