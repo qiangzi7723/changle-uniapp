@@ -2,7 +2,7 @@
 	<view class="home">
 		<view class="banner">
 			<swiper class="swiper-container">
-				<block v-for="item in imgUrls" key="item">
+				<block v-for="item in imgUrls" key={{item}}>
 					<swiper-item><view class="swiper-item" :style="{ backgroundImage: `url(${item})` }"></view></swiper-item>
 				</block>
 			</swiper>
@@ -11,7 +11,7 @@
 			<view class="content">
 				<!-- 4个入口 -->
 				<view class="entry">
-					<view v-for="item in entryList" class="entry-item">
+					<view v-for="item,index in entryList" class="entry-item" key={{index}}>
 						<view :style="{ backgroundImage: `url(${item.img})` }" class="entry-icon"></view>
 						<text class="entry-text">{{ item.text }}</text>
 					</view>
@@ -29,7 +29,7 @@
 						<text class="hot-text">热门活动</text>
 					</view>
 					<view class="hot-list">
-						<view class="hot-banner" v-for="item in hotList">
+						<view class="hot-banner" v-for="item,index in hotList" key={{index}}>
 							<view class="hot-img" :style="{ backgroundImage: `url(${item.img})` }"></view>
 							<view class="hot-description">
 								<text class="hot-des-content">{{ item.text }}</text>
@@ -68,8 +68,9 @@ export default {
 			]
 		};
 	},
-	onLoad() {
+	async onLoad() {
 		console.log('home页面加载中');
+		const res = await this.$request.get('/home/msg/list')
 	}
 };
 </script>
