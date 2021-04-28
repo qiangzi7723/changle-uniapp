@@ -1,0 +1,1 @@
+<view class="qa"><view class="container"><block wx:for="{{list}}" wx:for-item="item" wx:for-index="index"><block><text class="question">{{index+1+"."+item.q}}</text><text class="answer">{{item.a}}</text></block></block></view></view>

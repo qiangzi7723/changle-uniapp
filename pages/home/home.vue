@@ -19,7 +19,13 @@
 				<!-- 公告消息 -->
 				<view class="msg">
 					<view class="msg-title"></view>
-					<text class="msg-text">12月第四周扫码排行榜公布啦，小道消息</text>
+					<swiper :autoplay="true" :interval="3000" :duration="1000" :vertical="true" :circular="true" class="msg-text-container">
+						<block v-for="item in msgTextList">
+							<swiper-item class="msg-text">
+								<text class="msg-text">{{item}}</text>
+							</swiper-item>
+						</block>
+					</swiper>
 					<text class="msg-btn">消息</text>
 				</view>
 				<!-- 热门活动 -->
@@ -65,12 +71,14 @@ export default {
 					text: '开辟你的专属草莓园 收获幸运礼物！',
 					img: '"../../static/asset/img/屏幕快照 2020-05-19 17.32.04.png"'
 				}
-			]
+			],
+			msgTextList: []
 		};
 	},
 	async onLoad() {
 		console.log('home页面加载中');
-		const res = await this.$request.get('/home/msg/list')
+		const res = await this.$request.get('/home/msg/list');
+		this.msgTextList = res.data.list;
 	}
 };
 </script>
@@ -157,6 +165,11 @@ export default {
 		background-image: url('http://192.168.31.161:8000/asset/img/home/title@2x.png');
 		background-size: contain;
 		background-position: center;
+	}
+
+	.msg-text-container{
+		height: 80rpx;
+		width: 404rpx;
 	}
 
 	.msg-text {

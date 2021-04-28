@@ -1,20 +1,33 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+		    "path" : "pages/profile/profile",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "个人中心",
+		        "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+		    }
+		},
+		{
 			"path": "pages/home/home",
 			"style": {
 				"navigationBarTitleText": "长乐时光",
 				"enablePullDownRefresh": false
 			}
 
-		},
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "长乐时光"
-			}
 		}
-	],
+	    
+        ,{
+            "path" : "pages/qaList/qaList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "常见问题",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -27,17 +40,17 @@
 		"selectedColor": "#C8161C",
 		"backgroundColor": "#FFFFFF",
 		"list": [{
+				"pagePath": "pages/profile/profile",
+				"iconPath": "/static/asset/img/home/tab_icon_wd_normal@2x.png",
+				"selectedIconPath": "/static/asset/img/home/tab_icon_wd_normal@2x.png",
+				"text": "个人中心"
+			},{
 				"pagePath": "pages/home/home",
 				"iconPath": "/static/asset/img/home/tab_icon_zy_selected@2x.png",
 				"selectedIconPath": "/static/asset/img/home/tab_icon_zy_selected@2x.png",
 				"text": "主页"
-			},
-			{
-				"pagePath": "pages/index/index",
-				"iconPath": "/static/asset/img/home/tab_icon_wd_normal@2x.png",
-				"selectedIconPath": "/static/asset/img/home/tab_icon_wd_normal@2x.png",
-				"text": "个人中心"
 			}
+			
 		]
 	}
 }
