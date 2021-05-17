@@ -1,7 +1,7 @@
 <template>
 	<view class="profile">
 		<view class="banner"><text class="title">个人中心</text></view>
-		<view class="avatar-conatiner">
+		<view class="avatar-conatiner" @click="login()">
 			<view class="avatar"><view class="avatar-text">默认头像</view></view>
 			<text class="avatar-des">点击授权用户信息</text>
 		</view>
@@ -67,6 +67,15 @@ export default {
 					url: item.url
 				})
 			}
+		},
+		login(){
+			console.log("点击授权")
+			// 授权
+			uni.login({
+				success(a,b,c) {
+					console.log("授权成功",a,b,c)
+				}
+			})
 		}
 	}
 };

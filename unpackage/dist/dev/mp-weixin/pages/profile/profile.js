@@ -208,6 +208,15 @@ var _default =
           url: item.url });
 
       }
+    },
+    login: function login() {
+      console.log("点击授权");
+      // 授权
+      uni.login({
+        success: function success(a, b, c) {
+          console.log("授权成功", a, b, c);
+        } });
+
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
